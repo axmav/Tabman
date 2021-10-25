@@ -33,8 +33,8 @@ open class TabmanViewController: PageboyViewController, PageboyViewControllerDel
     
     // MARK: Views
     
-    internal let topBarContainer = UIStackView()
-    internal let bottomBarContainer = UIStackView()
+    public let topBarContainer = UIStackView()
+    public let bottomBarContainer = UIStackView()
     
     /// All bars that have been added to the view controller.
     public private(set) var bars = [TMBar]()
