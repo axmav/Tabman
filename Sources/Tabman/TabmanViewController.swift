@@ -236,7 +236,7 @@ extension TabmanViewController {
         bar.removeFromSuperview()
     }
     
-    private func layoutContainers(in view: UIView) {
+    public func layoutContainers(in view: UIView) {
         
         topBarContainer.axis = .vertical
         view.addSubview(topBarContainer)
@@ -247,7 +247,7 @@ extension TabmanViewController {
             topBarContainer.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ]
         if #available(iOS 11, *) {
-            topConstraints.append(topBarContainer.topAnchor.constraint(equalTo: view.safeAreaTopAnchor))
+            topConstraints.append(topBarContainer.topAnchor.constraint(equalTo: view.topAnchor))
         } else {
             topConstraints.append(topBarContainer.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor))
         }
