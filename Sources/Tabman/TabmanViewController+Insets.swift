@@ -37,7 +37,7 @@ extension TabmanViewController {
         
         private init(tabmanViewController: TabmanViewController) {
             let safeAreaInsets = Insets.makeSafeAreaInsets(for: tabmanViewController)
-            let barInsets = UIEdgeInsets(top: tabmanViewController.topBarContainer.bounds.size.height,
+            let barInsets = UIEdgeInsets(top: tabmanViewController.topBarContainer.bounds.size.height + safeAreaInsets.top,
                                          left: 0.0,
                                          bottom: tabmanViewController.bottomBarContainer.bounds.size.height,
                                          right: 0.0)
