@@ -55,7 +55,7 @@ extension TabmanViewController {
         public static func makeSafeAreaInsets(for viewController: UIViewController) -> UIEdgeInsets {
             if #available(iOS 11, *) {
                 let insets = viewController.view.safeAreaInsets
-                return UIEdgeInsets(top: 0,
+                return UIEdgeInsets(top: -insets.top,
                                 left: 0.0,
                                 bottom: insets.bottom,
                                 right: 0.0)
